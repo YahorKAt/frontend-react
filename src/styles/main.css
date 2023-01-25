@@ -1,0 +1,304 @@
+@import "./reset.css";
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+	/* Colors */
+	--blackpure: #000;
+	--black: #171718;
+	--black-border: #26292d;
+	--white: #fff;
+	--purple: #5c62ec;
+
+	/* Nav */
+	--nav-bg: var(--black);
+	--nav-border: var(--black-border);
+	--nav-text: var(--white);
+
+	/* Header */
+	--header-bg: var(--black);
+	--header-text: var(--white);
+
+	/* Footer */
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+
+	/* Light mode */
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+	--title-1: var(--accent);
+
+	--project-card-bg: var(--white);
+	--project-card-text: var(--black);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+}
+
+.dark {
+	/* Dark mode */
+	--page-bg: #252526;
+	--text-color: var(--white);
+
+	--title-1: var(--white);
+
+	--project-card-bg: var(--black);
+	--project-card-text: var(--white);
+	--box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+}
+
+html,
+body {
+	min-height: 100vh;
+
+	font-family: "DM Sans", sans-serif;
+	letter-spacing: -0.5px;
+
+	/* Light mode */
+	background-color: var(--page-bg);
+	color: var(--text-color);
+}
+
+#root {
+	min-height: 100vh;
+}
+
+.App {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* General */
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+}
+
+.none {
+	display: none !important;
+}
+
+.section {
+	padding: 70px 0;
+}
+
+.title-1 {
+	margin-bottom: 60px;
+
+	font-size: 60px;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--title-1);
+	text-align: center;
+}
+
+.title-2 {
+	margin-bottom: 20px;
+
+	font-size: 40px;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+/* Btn */
+
+.btn {
+	display: inline-block;
+	height: 48px;
+	padding: 12px 28px;
+
+	border-radius: 5px;
+	background-color: var(--accent);
+	color: var(--white);
+	letter-spacing: 0.15px;
+	font-size: 16px;
+	font-weight: 500;
+
+	transition: opacity 0.2s ease-in;
+}
+
+.btn:hover {
+	opacity: 0.8;
+}
+
+.btn:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Btn outline */
+
+.btn-outline {
+	display: flex;
+	column-gap: 10px;
+	align-items: center;
+
+	height: 48px;
+	padding: 12px 20px;
+
+	border-radius: 5px;
+	border: 1px solid #000;
+	background-color: #fff;
+	color: #000;
+
+	transition: opacity 0.2s ease-in;
+}
+
+.btn-outline:hover {
+	opacity: 0.8;
+}
+
+.btn-outline:active {
+	position: relative;
+	top: 1px;
+}
+
+/* Projects  */
+
+.projects {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 30px;
+}
+
+/* Project details */
+
+.project-details {
+	margin: 0 auto;
+	max-width: 865px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	text-align: center;
+}
+
+.project-details__cover {
+	max-width: 100%;
+	margin-bottom: 40px;
+
+	box-shadow: var(--box-shadow);
+	border-radius: 10px;
+}
+
+.project-details__desc {
+	margin-bottom: 30px;
+
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 1.3;
+}
+
+/* Content list */
+
+.content-list {
+	margin: 0 auto;
+	max-width: 570px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 40px;
+	text-align: center;
+}
+
+.content-list a {
+	color: var(--accent);
+}
+
+.content-list__item {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.content-list__item p + p {
+	margin-top: 0.5em;
+}
+
+@media (max-width: 620px) {
+	/* Header  */
+
+	.header {
+		min-height: unset;
+	}
+
+	.header__title {
+		font-size: 30px;
+	}
+
+	.header__title strong {
+		font-size: 40px;
+	}
+
+	/* Nav */
+
+	.nav-row {
+		justify-content: space-between;
+	}
+
+	.dark-mode-btn {
+		order: 0;
+	}
+
+	/* General */
+
+	.section {
+		padding: 40px 0;
+	}
+
+	.title-1 {
+		margin-bottom: 30px;
+		font-size: 40px;
+	}
+
+	.title-2 {
+		margin-bottom: 10px;
+		font-size: 30px;
+	}
+
+	/* Projects */
+
+	.project__title {
+		font-size: 22px;
+	}
+
+	/* Project page */
+
+	.project-details__desc {
+		margin-bottom: 20px;
+		font-size: 22px;
+	}
+
+	/* Content List */
+
+	.content-list {
+		row-gap: 20px;
+	}
+
+	.content-list__item {
+		font-size: 16px;
+	}
+
+	/* Footer */
+
+	.footer {
+		padding: 40px 0 30px;
+	}
+
+	.footer__wrapper {
+		row-gap: 20px;
+	}
+
+	/* Social */
+
+	.social {
+		column-gap: 20px;
+	}
+
+	.social__item {
+		width: 28px;
+	}
+}
